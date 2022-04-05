@@ -1,0 +1,116 @@
+
+*{
+  font-family: 'Kanit', sans-serif;
+}
+body
+  {
+  background-image:url('../img/background2.jpg');
+  background-size: cover;
+  background-position: center;
+  }
+
+.sign-up-form
+{
+  
+  width: 398px;
+  box-shadow: 0 0 18px 0 rgb(0 0 0 / 40%);
+  padding: 10px;
+  margin: 8% auto 0;
+  text-align: center;
+  border-radius: 25px;
+  background: #f8fff9;
+  list-style: none;
+}
+
+.sign-in-form
+{
+  width: 401px;
+  box-shadow: 0 0 18px 0 rgb(0 0 0 / 40%);
+  padding: 10px;
+  margin: 8% auto 0;
+  text-align: justify;
+  border-radius: 25px;
+  background: #f8fffa;
+  list-style-type: none;
+}
+
+.sign-up-form h1
+{
+ padding: 0 0 10px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ font-family: monospace;
+ font-size: 30px;
+ color: darkblue;
+}
+
+.sign-in-form h2
+{
+ padding: 0 0 10px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ font-family: monospace;
+ font-size: 30px;
+ color: darkblue;
+}
+
+.input-box
+{
+  border-radius: 18px;
+  padding: 8px;
+  margin: 2px;
+  width: 90%;
+  border: 1px solid #999;
+  outline: none;
+}
+.signup-btn
+{
+ background-color: blueviolet;
+ color: white;
+ width: 90%;
+ padding: 12px;
+ border-radius: 20px;
+ font-size: 15px;
+ font-family: sans-serif;
+ margin: 1px;
+ border: none;
+ outline: none;
+ cursor: pointer;
+}
+
+.signup-btn:hover,.signup-btn:active
+{
+  background: darkblue;
+}
+
+p
+{
+  width: 80%;
+  text-align: center;
+  color: black;
+  font-size: 13px;
+  font-family: sans-serif;
+}
+
+hr
+{
+ margin-top: 20px;
+ width: 80%;
+}
+
+.or
+{
+ background: ghostwhite;
+ font-family: monospace;
+ font-size: 14px;
+ width: 30px;
+ margin: -15px auto 10px;
+}
+
+.user1
+{
+  width:50px;
+}
+.sign-up-form ul li{
+  list-style: none;
+}
