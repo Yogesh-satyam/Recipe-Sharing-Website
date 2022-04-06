@@ -6,3 +6,4 @@ from django.db import models
 class Cuisines_category(models.Model):
     name:models.CharField(max_length=50)
     desp:models.CharField(max_length=500)
+    path:models.CharField(max_length=100)
