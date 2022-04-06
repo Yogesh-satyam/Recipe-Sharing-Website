@@ -86,7 +86,7 @@
         {% for cuisines_category in cuisines_categories %}
           <div class="cuisines-card">
               <div class="cuisines-image">
-                  <img src="{% static 'main/img/american1.jpg' %}" class="cuisines-thumb" alt="">
+                  <img src="{% static cuisines_category.path %}" class="cuisines-thumb" alt="">
                   <button class="card-btn">Explore</button>
               </div>
               <div class="cuisines-info">

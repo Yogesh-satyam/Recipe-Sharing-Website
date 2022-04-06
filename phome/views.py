@@ -7,7 +7,7 @@ def index(request):
     cuisines_category1.id=0
     cuisines_category1.name='North Indian'
     cuisines_category1.desp='Spciy foods with great taste of North India'
-    cuisines_category1.path=''
+    cuisines_category1.path='main/img/american1.jpg'
 
     cuisines_category2=Cuisines_category()
     cuisines_category2.id=1
@@ -62,7 +62,7 @@ def index(request):
     cuisines_category10.name='Japanese'
     cuisines_category10.desp='The traditional cuisine of Japan (Japanese: washoku) is based on rice with miso soup and other dishes; there is an emphasis on seasonal ingredients. Side dishes often consist of fish, pickled vegetables, and vegetables cooked in broth. Seafood is common, often grilled, but also served raw as sashimi or in sushi.'
     cuisines_category10.path=''
-    
+
     Cuisines_categories=[cuisines_category1,cuisines_category2,cuisines_category3,cuisines_category4,cuisines_category5,cuisines_category6,cuisines_category7,cuisines_category8,cuisines_category9,cuisines_category10]
     
     return render(request,'main/index.html',{'cuisines_categories':Cuisines_categories})
