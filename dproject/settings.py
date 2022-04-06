@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'phome',
-    'user.apps.UserConfig',
-    
+    'user',
+    'userprofile',
     'crispy_forms',
 ]
 
