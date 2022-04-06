@@ -24,7 +24,7 @@ def signup(request):
     return render(request,'user/signup.html',{'form':form})
 
 def login(request):
-    return render(request,'userprofile/Profile.html')
+    return redirect('/')
     
         
     
