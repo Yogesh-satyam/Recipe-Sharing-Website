@@ -71,6 +71,9 @@
     <form class="sign-up-form" method="Post" >   
       <img class="user1" src="{% static  'main/img/users.png' %}">
       <h1> Sign up now </h1>
+      {%for message in messages %}
+      <h5 class="error-message">{{message}}</h5>
+      {% endfor %}
       {% csrf_token %}
       <input type="text" class="input-box" name='first-name' pattern="[a-zA-Z'-'\s]*" placeholder="First Name"  required>
       <input type="text" class="input-box" name='last-name' placeholder="Last Name">
@@ -85,7 +88,6 @@
       <p class="message">Do you have an Account? <a href="{% url 'login' %}">Sign In</a></p>
     </forms>
   </div>
-  <script type="text/javascript" src="{% static 'main/js/sigma.js' %}"></script>
    <script>
     function myOnClick()
     {

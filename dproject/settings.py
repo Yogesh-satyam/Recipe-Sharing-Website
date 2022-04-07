@@ -105,6 +105,9 @@ AUTH_PASSWORD_VALIDATORS = [
     #},
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },   
+    {
+        'NAME': 'registration.validators.UppercaseValidator',
     },
 ]
 
@@ -135,5 +138,3 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'login'
-
-LOGIN_REDIRECT_URL = 'profile'

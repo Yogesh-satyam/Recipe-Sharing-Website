@@ -21,7 +21,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('',include('phome.urls')),
     path("user/",include('user.urls')),
-    path('user/', include('django.contrib.auth.urls')),
     path("userprofile/",include('userprofile.urls')),
     
 ]
