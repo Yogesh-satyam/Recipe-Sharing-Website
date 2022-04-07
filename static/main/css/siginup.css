@@ -12,7 +12,7 @@ body
 .sign-up-form
 {
   
-  width: 398px;
+  width: 350px;
   box-shadow: 0 0 18px 0 rgb(0 0 0 / 40%);
   padding: 10px;
   margin: 8% auto 0;
@@ -95,7 +95,7 @@ p
 hr
 {
  margin-top: 20px;
- width: 80%;
+ width: 100%;
 }
 
 .or
@@ -110,7 +110,4 @@ hr
 .user1
 {
   width:50px;
-}
-.sign-up-form ul li{
-  list-style: none;
 }

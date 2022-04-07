@@ -68,13 +68,17 @@
       </nav>
 </header>
   <div class=".register-form">	 
-    <form class="sign-up-form" method="Post" >
-      {% csrf_token %}
+    <form class="sign-up-form" method="Post" >   
       <img class="user1" src="{% static  'main/img/users.png' %}">
       <h1> Sign up now </h1>
-      {{ form|crispy }}
-      
-      <p><span><input type="checkbox"></span>I agree to the terms of services</p>
+      {% csrf_token %}
+      <input type="text" class="input-box" name='first-name' pattern="[a-zA-Z'-'\s]*" placeholder="First Name"  required>
+      <input type="text" class="input-box" name='last-name' placeholder="Last Name">
+      <input type="text" class="input-box" name='username' placeholder="Username" required>
+      <input type="email" class="input-box" name='email' placeholder="Your Email" required>
+      <input type="password" class="input-box" name='password' placeholder="Enter Password" required> 
+      <input type="password" class="input-box" name='cnf-password' placeholder="Confirm Password" required>  
+      <p><span><input type="checkbox" required></span>I agree to the terms of services</p>
       <button type="submit" class="signup-btn">Sign up</button>
       <hr>
       <p class="or">OR</p>
