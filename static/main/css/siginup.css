@@ -58,7 +58,7 @@ body
 {
   border-radius: 18px;
   padding: 8px;
-  margin: 2px;
+  margin: 5px;
   width: 90%;
   border: 1px solid #999;
   outline: none;
@@ -113,4 +113,19 @@ hr
 }
 .error-message{
 color: red;
+}
+
+.sign-up-form .flex-between {
+  display: "flex";
+}
+
+.form-group i {
+  position: "absolute";
+  left: 1rem;
+}
+.visible {
+  display: block;
+}
+.hidden {
+  display: none;
 }

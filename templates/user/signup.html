@@ -75,7 +75,12 @@
       <h5 class="error-message">{{message}}</h5>
       {% endfor %}
       {% csrf_token %}
-      <input type="text" class="input-box" name='first-name' pattern="[a-zA-Z'-'\s]*" placeholder="First Name"  required>
+      <div class="flex-between form-group">
+        <input type="text" class="input-box" name='first-name' pattern="[a-zA-Z'-'\s]*" placeholder="First Name"  required>
+        <i class="fa-solid fa-circle-info information"></i>
+        <span class="information-message hidden">There should be no numeric character</span>
+      </div>
+
       <input type="text" class="input-box" name='last-name' placeholder="Last Name">
       <input type="text" class="input-box" name='username' placeholder="Username" required>
       <input type="email" class="input-box" name='email' placeholder="Your Email" required>
@@ -86,7 +91,7 @@
       <hr>
       <p class="or">OR</p>
       <p class="message">Do you have an Account? <a href="{% url 'login' %}">Sign In</a></p>
-    </forms>
+    </form>
   </div>
    <script>
     function myOnClick()
