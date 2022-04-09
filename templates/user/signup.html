@@ -83,8 +83,13 @@
 
       <input type="text" class="input-box" name='last-name' placeholder="Last Name">
       <input type="text" class="input-box" name='username' placeholder="Username" required>
+
       <input type="email" class="input-box" name='email' placeholder="Your Email" required>
+      <div class="flex-between form-group">
       <input type="password" class="input-box" name='password' placeholder="Enter Password" required> 
+      <i class="fa-solid fa-circle-info information"></i>
+        <span class="information-message hidden">There should be no numeric character</span>
+      </div>
       <input type="password" class="input-box" name='cnf-password' placeholder="Confirm Password" required>  
       <p><span><input type="checkbox" required></span>I agree to the terms of services</p>
       <button type="submit" class="signup-btn">Sign up</button>
