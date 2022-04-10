@@ -1,6 +1,4 @@
-
 {% load static %}
-{% load crispy_forms_tags %}
 <html>
 <head>
 <title>Sign Up</title>
@@ -9,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link  type="text/css" href="{% static 'main/css/Style.css' %}" rel="stylesheet">
 <link  type="text/css" href="{% static 'main/css/Responsive.css' %}" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href={% static 'main/css/siginup.css' %} >
+<link  type="text/css" href="{% static 'main/css/siginup.css' %}" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" >
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" >
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" >
@@ -24,7 +22,7 @@
           <span class="fas fa-bars"></span>
         </div>
         
-        <div class="logo">Recipe Land</div>
+        <div class="logo">LaZeeZ.com</div>
         <div class="nav-items">
           <li id="home-active"><a href="{% url 'index' %}"><i class="fa fa-home"></i>Home</a></li>
           <li id="dropdown-menu"><a href="#"><i class="fa fa-caret-down"></i>Category</a>
@@ -50,7 +48,6 @@
           <li><a href="#"><i class="fa fa-blog"></i>Post</a></li>
           <li><a href="#"><i class="fa fa-info"></i>About us</a></li>
           <li><a href={% url 'login' %}><i class="fa fa-right-to-bracket"></i>Login</a></li>
-          <li id="signup-active"><a href="{% url 'signup' %}"><i class="fa fa-user-plus"></i>Sign Up</a></li>
         </div>
    
         <div class="search-icon">
@@ -67,9 +64,12 @@
         </form>
       </nav>
 </header>
+
   <div class=".register-form">	 
-    <form class="sign-up-form" method="Post" >   
-      <img class="user1" src="{% static  'main/img/users.png' %}">
+    <form class="sign-up-form" method="Post" > 
+      <div class="user1">  
+        <img src="{% static  'main/img/users.png' %}">
+      </div>
       <h1> Sign up now </h1>
       {%for message in messages %}
       <h5 class="error-message">{{message}}</h5>
