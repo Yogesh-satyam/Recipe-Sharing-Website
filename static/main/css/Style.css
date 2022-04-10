@@ -14,7 +14,7 @@ header {
 }
 body {
   display: block;
-  background-image: url("../img/background1.jpg");
+  background-image: url("../img/background2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -62,9 +62,8 @@ nav .nav-items {
 }
 .nav-items li a:hover,
 .categories ul li:hover {
-  color: #26d63b;
+  color: #65eb7dfb;
 }
-#home-active,
 .nav-items li:hover,
 .categories ul li:hover {
   background: rgb(84 136 200 / 92%);
@@ -161,7 +160,7 @@ nav .menu-icon span {
   height: 100vh;
 }
 
-.Fname {
+.main-banner {
   position: absolute;
   width: 900px;
   height: 340px;
@@ -169,14 +168,14 @@ nav .menu-icon span {
   left: 30%;
   box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.6);
   text-align: center;
-  background-color: rgb(233, 233, 78);
+  background-color:rgb(193 210 224 / 81%);
   padding-bottom: 20px;
   pointer-events: none;
 }
 
-.Fname h1 {
+.banner h1 {
   text-align: center;
-  color: black;
+  color: #952b1a;
   font-size: 100px;
   font-family: lucida;
   margin-left: 30px;
@@ -184,13 +183,27 @@ nav .menu-icon span {
   margin-top: 74px;
 }
 
-.Fname h2 {
+.banner h2 {
   text-align: center;
-  color: firebrick;
+  color: #7922b2;
   font-size: 20px;
   font-family: Lucida Handwriting;
   margin-left: 30px;
   margin-top: 5px;
+}
+/* ################################################################################################ */
+
+
+.welcome-user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    color: #0d1d70f7;
+    text-transform: capitalize;  
 }
 
 /* #Slider  */
@@ -262,7 +275,7 @@ nav .menu-icon span {
   text-transform: capitalize;
   border: none;
   outline: none;
-  background: #fff;
+  background: rgb(255, 255, 255);
   border-radius: 5px;
   transition: 0.5s;
   cursor: pointer;
@@ -274,7 +287,7 @@ nav .menu-icon span {
 }
 
 .card-btn:hover {
-  background: #ff7d7d;
+  background: #7b346c;
   color: #fff;
 }
 
@@ -317,7 +330,7 @@ nav .menu-icon span {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff03 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #c957cd03 100%);
   cursor: pointer;
   z-index: 8;
 }
@@ -339,7 +352,7 @@ nav .menu-icon span {
 .pre-btn:hover img,
 .nxt-btn:hover img {
   opacity: 1;
-  background-color: rgba(201, 202, 185, 0.595);
+  background-color: rgba(251, 251, 251, 0.595);
 }
 
 .collection-container {
