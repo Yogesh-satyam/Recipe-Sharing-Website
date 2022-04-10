@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'phome',
     'user',
     'userprofile',
-    'crispy_forms'
 ]
 
 MIDDLEWARE = [

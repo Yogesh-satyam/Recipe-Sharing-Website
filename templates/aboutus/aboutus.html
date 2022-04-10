@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log In</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link type="text/css" href="{% static 'main/css/Style.css' %}" rel="stylesheet" >
+        <link type="text/css" href="{% static 'main/css/Responsive.css' %}" rel="stylesheet" >
+        <link type="text/css" href="{% static 'main/css/aboutus.css' %}" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" >
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/6f4051ccb8.js" crossorigin="anonymous"></script>
+        <script src="{% static 'main/js/script.js' %}"  defer></script>
+    </head>
+    <body class="aboutus-body">
+        <header>
+        <nav>
+                <div class="menu-icon">
+                <span class="fas fa-bars"></span>
+                </div>       
+                <div class="logo">LaZeeZ.com</div>
+                <div class="nav-items">
+                <li><a href="{% url 'index' %}"><i class="fa fa-home"></i>Home</a></li>
+                <li id="dropdown-menu"><a href="#"><i class="fa fa-caret-down"></i>Category</a>
+                <div class="categories">
+                <ul>
+                    <li><a href="#">Easy Dinner</a></li>
+                    <li><a href="#">Work Lunch</a></li>
+                    <li><a href="#">Air Fyer</a></li>
+                    <li><a href="#">North India</a></li>
+                    <li><a href="#">5 Ingredient Meals</a></li>
+                    <li><a href="#">One Pot Recipe</a></li>
+                    <li><a href="#">Family Dinner</a></li>
+                    <li><a href="#">Date Night</a></li>
+                    <li><a href="#">Slow Cooker Recipes</a></li>
+                    <li><a href="#">Plant Based Meals</a></li>
+                    <li><a href="#">Breakfast</a></li>
+                    <li><a href="#">Lunch</a></li>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Desserts</a></li>
+                    <li><a href="#">Snacks</a></li>   
+                </ul>
+                </div></li>
+                <li><a href="#"><i class="fa fa-blog"></i>Post</a></li>
+                <li><a href="#"><i class="fa fa-info"></i>About us</a></li>
+                <li><a href={% url 'signup' %}><i class="fa fa-user-plus"></i>Sign Up</a></li>
+                </div>  
+                <div class="search-icon">
+                <span class="fa-solid fa-magnifying-glass"></span>
+                </div>
+                <div class="cancel-icon">
+                <span class="fas fa-times"></span>
+                </div>
+                <form  action="#">
+                <input type="search" class="search-data" placeholder="Find a recipe" required>
+                <button type="submit" class="fas fa-search"></button>
+                </form>
+            </nav>
+        </header>
+
+        <div class="about-us">
+            <img class="info1" src="{% static  'main/img/info.png' %}">
+            <h1>About Us</h1>
+            <h2>The project is aimed at developing a Recipe sharing website, which is a social networking website. People's social lives become more active as a result of the social networking website. A recipe sharing website is a web-based service that allows users to establish profiles and share recipes. Users can share their recipe with others and can show their cooking talent and enhance their skills. </h2>
+
+            <h1>Motive</h1>  
+            <h2> 
+                Cooking is the science, art, and craft of preparing food with heat. 
+                Cooking techniques vary by country and culture, from grilling food over an open fire to utilising electric stoves, and baking in various sorts of ovens, all reflecting local conditions. The culinary sector is continually growing and developing as new inventions and cooking techniques emerge.. For chefs decorating, serving and flavour of dish has become important aspects to look upon either cooking at home or working as professional chef in popular restaurant. 
+                It has been seen from the past times that this skill has been limited up to their family only and no one really cares about it. It is one such thing which is not considered talent and is not ever recognized by them due to their day-to-day chores. 
+                
+                Everyone loves food and there are some people who loves to cook food, this project will be beneficial this project is aimed at developing a recipe sharing website. This project will help people to show their skills and creativity and will help to uplift their career in culinary industry. 
+            </h2>
+              
+        
+
+            <h1>Creaters</h1>  
+
+            <h2>Anshika,
+            Yogesh Satyam,
+            Tushar Wadhawan,
+            Abhishek Jaraut
+            </h2>
+        </div>
+            </form>
+                <footer class="footer">
+                    <div class="inner-footer">
+                        <h3>Lazeez</h3>
+                        <div class="social-links">
+                            <ul>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </ul>
+                        </div>
+                        <div class="outer-footer">
+                            Copyright &copy; Lazeez. All Rights Reserved 
+                        </div>
+                    </diV>
+                </footer>
+            </form>
+        </div>
+    </body>
+</html>

@@ -19,65 +19,65 @@
   </head>
   <body>
     
-  <header>
-    <nav>
-      <div class="menu-icon">
-        <span class="fas fa-bars"></span>
-      </div>
-      
-      <div class="logo">LaZeeZ.com</div>
-      <div class="nav-items">
-        <li id="home-active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
-        <li id="dropdown-menu"><a href="#"><i class="fa fa-caret-down"></i>Recipes</a>
-          <div class="categories">
-            <ul>
-              <li><a href="#">Easy Dinner</a></li>
-              <li><a href="#">Work Lunch</a></li>
-              <li><a href="#">Air Fyer</a></li>
-              <li><a href="#">North India</a></li>
-              <li><a href="#">5 Ingredient Meals</a></li>
-              <li><a href="#">One Pot Recipe</a></li>
-              <li><a href="#">Family Dinner</a></li>
-              <li><a href="#">Date Night</a></li>
-              <li><a href="#">Slow Cooker Recipes</a></li>
-              <li><a href="#">Plant Based Meals</a></li>
-              <li><a href="#">Breakfast</a></li>
-              <li><a href="#">Lunch</a></li>
-              <li><a href="#">Dinner</a></li>
-              <li><a href="#">Desserts</a></li>
-              <li><a href="#">Snacks</a></li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="#"><i class="fa fa-blog"></i>Post</a></li>
-        <li><a href="#"><i class="fa fa-info"></i>About us</a></li>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'logout' %}"><i class="fa fa-right-to-bracket"></i>Logout</a></li>
-        {% else %}
-        <li><a href="{% url 'login' %}"><i class="fa fa-right-to-bracket"></i>Login</a></li>
-        <li><a href="{% url 'signup' %}"><i class="fa fa-user-plus"></i>Sign Up</a></li>
-        {% endif %}
-      </div>
- 
-      <div class="search-icon">
-        <span class="fa-solid fa-magnifying-glass"></span>
-      </div>
- 
-      <div class="cancel-icon">
-        <span class="fas fa-times"></span>
-      </div>
- 
-      <form action="#">
-        <input type="search" class="search-data" placeholder="Find a recipe" required>
-        <button type="submit" class="fas fa-search"></button>
-      </form>
-    </nav>
-  </header>
-  
-  
-  
+    <header>
+      <nav>
+        <div class="menu-icon">
+          <span class="fas fa-bars"></span>
+        </div>
+        
+        <div class="logo">LaZeeZ.com</div>
+        <div class="nav-items">
+          <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+          <li id="dropdown-menu"><a href="#"><i class="fa fa-caret-down"></i>Recipes</a>
+            <div class="categories">
+              <ul>
+                <li><a href="#">Easy Dinner</a></li>
+                <li><a href="#">Work Lunch</a></li>
+                <li><a href="#">Air Fyer</a></li>
+                <li><a href="#">North India</a></li>
+                <li><a href="#">5 Ingredient Meals</a></li>
+                <li><a href="#">One Pot Recipe</a></li>
+                <li><a href="#">Family Dinner</a></li>
+                <li><a href="#">Date Night</a></li>
+                <li><a href="#">Slow Cooker Recipes</a></li>
+                <li><a href="#">Plant Based Meals</a></li>
+                <li><a href="#">Breakfast</a></li>
+                <li><a href="#">Lunch</a></li>
+                <li><a href="#">Dinner</a></li>
+                <li><a href="#">Desserts</a></li>
+                <li><a href="#">Snacks</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#"><i class="fa fa-blog"></i>Post</a></li>
+          <li><a href="{% url 'aboutus' %}"><i class="fa fa-info"></i>About us</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'logout' %}"><i class="fa fa-right-to-bracket"></i>Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'login' %}"><i class="fa fa-right-to-bracket"></i>Login</a></li>
+          <li><a href="{% url 'signup' %}"><i class="fa fa-user-plus"></i>Sign Up</a></li>
+          {% endif %}
+        </div>
+
+        <div class="search-icon">
+          <span class="fa-solid fa-magnifying-glass"></span>
+        </div>
+
+        <div class="cancel-icon">
+          <span class="fas fa-times"></span>
+        </div>
+
+        <form action="#">
+          <input type="search" class="search-data" placeholder="Find a recipe" required>
+          <button type="submit" class="fas fa-search"></button>
+        </form>
+      </nav>
+    </header>
+    
+    
+    
   <div class="banner">
-    <div class="Fname">
+    <div class="main-banner">
       <h1>LaZeeZ</h1>
       <h2>A Recipe is a story that ends with a good meal</h2>
     </div>
@@ -88,29 +88,29 @@
     {% endif %}
   </div>
 
-    <section class="cuisines"> 
-      <h2 class="cuisines-category">What's Your Favourite cuisines?</h2>
-      <button class="pre-btn"><img src="{% static 'main/img/arrow.png' %}" alt=""></button>
-      <button class="nxt-btn"><img src="{% static 'main/img/arrow.png' %}" alt=""></button>
+  <section class="cuisines"> 
+    <h2 class="cuisines-category">What's Your Favourite cuisines?</h2>
+    <button class="pre-btn"><img src="{% static 'main/img/arrow.png' %}" alt=""></button>
+    <button class="nxt-btn"><img src="{% static 'main/img/arrow.png' %}" alt=""></button>
 
-      <div class="cuisines-container">
-        {% for cuisines_category in cuisines_categories %}
-          <div class="cuisines-card">
-              <div class="cuisines-image">
-                {% if cuisines_category.image %}
-                  <img src="{{ cuisines_category.image.url }}" class="cuisines-thumb" alt="">
-                {% else %}
-                  <img type="file" src="" class="cuisines-thumb" alt="image not availble">
-                {% endif %}
-                  <button class="card-btn">Explore</button>
-              </div>
-              <div class="cuisines-info">
-                  <h2>{{cuisines_category.name}}</h2>
-                  <p class="cuisines-short-description">{{cuisines_category.desp}}</p>
-              </div>
-          </div>
-        {% endfor %} 
-      </div>
+    <div class="cuisines-container">
+      {% for cuisines_category in cuisines_categories %}
+        <div class="cuisines-card">
+            <div class="cuisines-image">
+              {% if cuisines_category.image %}
+                <img src="{{ cuisines_category.image.url }}" class="cuisines-thumb" alt="">
+              {% else %}
+                <img type="file" src="" class="cuisines-thumb" alt="image not availble">
+              {% endif %}
+                <button class="card-btn">Explore</button>
+            </div>
+            <div class="cuisines-info">
+                <h2>{{cuisines_category.name}}</h2>
+                <p class="cuisines-short-description">{{cuisines_category.desp}}</p>
+            </div>
+        </div>
+      {% endfor %} 
+    </div>
   </section>
 
   </body>

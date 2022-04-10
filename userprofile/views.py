@@ -1,3 +1,5 @@
 from django.shortcuts import render, HttpResponse
-def profile(request):
-    return render(request,"userprofile/Profile.html")
+
+
+def userprofile(request):
+    return render(request,'userprofile/userprofile.html')
