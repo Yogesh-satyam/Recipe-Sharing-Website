@@ -1,7 +1,7 @@
 from django.forms import ValidationError
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
-from django.contrib import messages
+from django.contrib import messages, auth
 from .validate import MinimumLengthValidator, NumberValidator, UppercaseValidator
 
 def signup(request):
@@ -39,8 +39,24 @@ def signup(request):
         return render(request,'user/signup.html')
 
 def login(request):
-    return redirect('/')
-    
+    if request.method=='POST':
+        form = request.POST
+        username=form['username']
+        password=request.POST['password']
+        user=auth.authenticate(username=username , password=password)
+        if user is not None:
+            auth.login(request,user)
+            return redirect('/')
+        else:
+            messages.info(request,'Invalid Credentials')
+            return redirect('login')
+    else:
+       return render(request,'user/login.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')  
+      
 def index(request):
     return redirect('/')
         

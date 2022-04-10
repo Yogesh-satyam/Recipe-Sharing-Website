@@ -12,7 +12,7 @@ body
 .sign-up-form
 {
   
-  width: 350px;
+  width: 360px;
   box-shadow: 0 0 18px 0 rgb(0 0 0 / 40%);
   padding: 10px;
   margin: 8% auto 0;
@@ -28,23 +28,13 @@ body
   box-shadow: 0 0 18px 0 rgb(0 0 0 / 40%);
   padding: 10px;
   margin: 8% auto 0;
-  text-align: justify;
+  text-align: center;
   border-radius: 25px;
   background: #f8fffa;
   list-style-type: none;
 }
 
-.sign-up-form h1
-{
- padding: 0 0 10px;
- margin-top: 10px;
- margin-bottom: 10px;
- font-family: monospace;
- font-size: 30px;
- color: darkblue;
-}
-
-.sign-in-form h2
+.sign-up-form h1, .sign-in-form h1
 {
  padding: 0 0 10px;
  margin-top: 10px;
@@ -109,19 +99,19 @@ hr
 
 .user1
 {
-  width:50px;
+  display: flex;
+  justify-content: center;  
 }
 .error-message{
 color: red;
 }
-
 .sign-up-form .flex-between {
-  display: "flex";
+  position: relative;
 }
 
-.form-group i {
-  position: "absolute";
-  left: 1rem;
+.form-group i{
+  z-index: 9;
+  margin-right: -17px;
 }
 .visible {
   display: block;
