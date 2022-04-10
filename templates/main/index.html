@@ -97,7 +97,11 @@
         {% for cuisines_category in cuisines_categories %}
           <div class="cuisines-card">
               <div class="cuisines-image">
-                  <img src="{% static cuisines_category.path %}" class="cuisines-thumb" alt="">
+                {% if cuisines_category.image %}
+                  <img src="{{ cuisines_category.image.url }}" class="cuisines-thumb" alt="">
+                {% else %}
+                  <img type="file" src="" class="cuisines-thumb" alt="image not availble">
+                {% endif %}
                   <button class="card-btn">Explore</button>
               </div>
               <div class="cuisines-info">

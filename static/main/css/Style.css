@@ -14,7 +14,7 @@ header {
 }
 body {
   display: block;
-  background-image: url("../img/background1.jpg");
+  background-image: url("../img/background2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -169,14 +169,14 @@ nav .menu-icon span {
   left: 30%;
   box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.6);
   text-align: center;
-  background-color: rgb(233, 233, 78);
+  background-color:rgb(193 210 224 / 81%);
   padding-bottom: 20px;
   pointer-events: none;
 }
 
 .Fname h1 {
   text-align: center;
-  color: black;
+  color: #952b1a;
   font-size: 100px;
   font-family: lucida;
   margin-left: 30px;
@@ -186,7 +186,7 @@ nav .menu-icon span {
 
 .Fname h2 {
   text-align: center;
-  color: firebrick;
+  color: #7922b2;
   font-size: 20px;
   font-family: Lucida Handwriting;
   margin-left: 30px;
@@ -203,9 +203,8 @@ nav .menu-icon span {
     text-align: center;
     font-size: 40px;
     font-weight: 800;
-    color: #752937;
-    text-transform: capitalize;
-   
+    color: #0d1d70f7;
+    text-transform: capitalize;  
 }
 
 /* #Slider  */
