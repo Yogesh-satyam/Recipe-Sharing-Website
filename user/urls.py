@@ -1,6 +1,6 @@
 
 from django.urls import path
-from .views import login, signup, logout
+from .views import login, signup, logout, userprofile
 from phome import views as home_views
 
 urlpatterns = [
@@ -9,5 +9,5 @@ urlpatterns = [
     path("login/", login ,name="login"),
     path("logout/", logout ,name="logout"),
     path("aboutus/", home_views.aboutus ,name="aboutus"),
-     
+    path("userprofile/", userprofile, name="userprofile"),
 ]
