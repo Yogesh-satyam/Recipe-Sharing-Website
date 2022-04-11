@@ -58,6 +58,12 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')  
+
+def userprofile(request):
+    return render(request,'user/userprofile.html')
+
+def index(request):
+    return  redirect('/')
       
           
 

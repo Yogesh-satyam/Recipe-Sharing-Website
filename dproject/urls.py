@@ -21,7 +21,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('',include('phome.urls')),
     path("user/",include('user.urls')),
-    path("userprofile/",include('userprofile.urls')),
     
 ]
 if settings.DEBUG:
