@@ -61,7 +61,7 @@ nav .nav-items {
   position: relative;
 }
 .nav-items li a:hover,
-.categories ul li:hover {
+.categories ul li a:hover {
   color: #65eb7dfb;
 }
 .nav-items li:hover,
@@ -131,13 +131,14 @@ nav .menu-icon span {
   box-shadow: 2px 2px 5px 0 rgba(227, 227, 233, 0.932);
   transform: translateY(2px);
   opacity: 0;
-  transition: opacity 190ms ease-in-out, transform 190ms ease-in-out;
+  transition: opacity 0.5s ease-in-out, translateY 0.5s ease-in-out;
   pointer-events: none;
 }
 .nav-items li:focus-within .categories,
 .nav-items li:hover .categories {
   position: absolute;
   opacity: 1;
+  transition: opacity 0.3s ease-in;
   transform: translateY(3px);
   pointer-events: auto;
 }
@@ -228,6 +229,7 @@ nav .menu-icon span {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
+  height: 29rem;
 }
 
 .cuisines-container::-webkit-scrollbar {
@@ -236,16 +238,24 @@ nav .menu-icon span {
 
 .cuisines-card {
   flex: 0 0 auto;
+  background-color: #d2dbebcc;
   width: 250px;
   height: 450px;
-  margin-right: 40px;
+  margin: 10px 27px 13px 8px;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+.cuisines-card:hover{
+  box-shadow: 4px 4px 18px 4px rgba(142, 90, 158, 0.627);
 }
 
 .cuisines-image {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 288px;
   overflow: hidden;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
 }
 
 .cuisines-thumb {
@@ -254,7 +264,7 @@ nav .menu-icon span {
   object-fit: cover;
 }
 
-.discount-tag {
+/* .discount-tag {
   position: absolute;
   background: #fff;
   padding: 5px;
@@ -263,7 +273,7 @@ nav .menu-icon span {
   right: 10px;
   top: 10px;
   text-transform: capitalize;
-}
+} */
 
 .card-btn {
   position: absolute;
@@ -294,19 +304,20 @@ nav .menu-icon span {
 .cuisines-info {
   width: 100%;
   height: 100px;
-  padding-top: 10px;
+}
+.cuisines-info h2{
+  text-align: center;
 }
 
 
-
 .cuisines-short-description {
-  width: 100%;
-  height: 20px;
+  width: 97%;
+  height: 100px;
   line-height: 20px;
   overflow: hidden;
   opacity: 0.5;
   text-transform: capitalize;
-  margin: 5px 0;
+  margin: 5px 0px 2px 6px;
 }
 
 .price {
@@ -323,7 +334,7 @@ nav .menu-icon span {
 .pre-btn,
 .nxt-btn {
   border: none;
-  width: 10vw;
+  width: 3vw;
   height: 100%;
   position: absolute;
   top: 0;
@@ -354,7 +365,7 @@ nav .menu-icon span {
   opacity: 1;
   background-color: rgba(251, 251, 251, 0.595);
 }
-
+/* 
 .collection-container {
   width: 100%;
   display: grid;
@@ -386,5 +397,5 @@ nav .menu-icon span {
 .collection:nth-child(3) {
   grid-column: span 2;
   margin-bottom: 10px;
-}
+} */
 
