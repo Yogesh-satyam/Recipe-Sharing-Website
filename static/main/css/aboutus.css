@@ -1,0 +1,107 @@
+.aboutus-body{
+  background-image: url('../img/background5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.about-us
+{
+    width: 1500px;
+    padding: 20px;
+    margin: 8rem auto 0;
+    margin-bottom: 100px;
+    text-align: center;
+    
+}
+
+.about-us h1
+{
+ padding: 0 0 1px;
+ margin-top: 5px;
+ margin-bottom: 1px;
+ font-size: 50px;
+ font-weight: 1000;
+ color: #3B3B64;
+}
+
+.about-us h2
+{
+  padding: 0 0 50px;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: rgba(50, 48, 48, 0.727);
+}
+
+.inner-footer h3
+{
+ padding: 0 0 5px;
+ margin-top: 70px;
+ margin-bottom: 15px;
+ font-family: lucida;
+ font-size: 28px;
+ text-align: center;
+ color: white;
+}
+
+.info1
+{
+  margin-bottom: 25px;
+  width: 75px;
+}
+
+.inner-footer
+{
+  margin: 0;
+  margin-top: 100px;
+  padding: 0;
+  background-color: #272727;
+}
+
+.social-links
+{
+  display: flex;
+}
+
+.social-links ul
+{
+  text-align: center;
+  padding-bottom: 25px;
+  color: white;
+}
+
+.social-links a
+{
+  font-size: 24px;
+  color: inherit;
+  border: 1pc solid #ccc;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+
+}
+
+.social-items
+{
+  list-style: none;
+}
+
+.social-items a
+{
+  padding: 10px 20px;
+  font-size: 35px;
+  color: white;
+}
+
+.outer-footer
+{
+  padding: 0;
+  text-align: center;
+  color: grey;
+  background-color: #2727278a;
+  font-size: 18px;
+  margin: 0;
+}

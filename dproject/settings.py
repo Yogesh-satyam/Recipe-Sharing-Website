@@ -39,10 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.redirects',
     'phome',
     'user',
-    'userprofile',
-    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -53,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
 ]
 
 ROOT_URLCONF = 'dproject.urls'
@@ -129,8 +130,9 @@ USE_TZ = True
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 
 STATIC_URL = 'static/'
-MEDIA_ROOT=[os.path.join(BASE_DIR,'media')]
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 MEDIA_URL='media/'
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Default primary key field type
@@ -138,3 +140,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'login'
+SITE_ID=1

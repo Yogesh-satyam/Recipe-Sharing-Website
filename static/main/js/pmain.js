@@ -1,4 +1,4 @@
-$('.profilenav ul li').click(function()
+('.profilenav ul li').click(function()
 {
     $(this).addclass("active").siblings().removeClass('active');
 })

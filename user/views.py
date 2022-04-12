@@ -1,8 +1,11 @@
 from django.forms import ValidationError
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib import messages, auth
 from .validate import MinimumLengthValidator, NumberValidator, UppercaseValidator
+
+# Create your views here.
 
 def signup(request):
     if request.method=='POST':
@@ -56,10 +59,10 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')  
-      
-def index(request):
-    return redirect('/')
-        
-    
 
-# Create your views here.
+@login_required(redirect_field_name='login')
+def userprofile(request):
+    return render(request,'user/userprofile.html')
+    
+      
+        
