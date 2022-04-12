@@ -1,4 +1,5 @@
 from django.forms import ValidationError
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib import messages, auth
@@ -59,11 +60,11 @@ def logout(request):
     auth.logout(request)
     return redirect('/')  
 
+@login_required(redirect_field_name='login')
 def userprofile(request):
     return render(request,'user/userprofile.html')
-
+    
 def index(request):
     return  redirect('/')
       
-          
-
+        
