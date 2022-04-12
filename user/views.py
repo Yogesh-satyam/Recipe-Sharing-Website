@@ -64,7 +64,5 @@ def logout(request):
 def userprofile(request):
     return render(request,'user/userprofile.html')
     
-def index(request):
-    return  redirect('/')
       
         
